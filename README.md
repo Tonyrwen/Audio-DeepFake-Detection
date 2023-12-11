@@ -1,5 +1,6 @@
 # Audio-DeepFake-Detection
-
+#### Update (December 11th)
+- I updated 4 files; 2 npy, 1 py and 1 ipynb. The npy files are needed to run the notebooks. I saved them so we won't have to re-run the commented code in the begining of the scripts to get the equal amount of fake and real data since that takes a while. ae.ipynb is a linear autoencoder training followed by CNN classification. CNN_VAE is a VAE followed by a CNN, it doesn't do very well. Also for everything I make my dataloader concat the arrays from preprocessing so what I get at the end is: batch, 1, 13, 4 and this is what I use for everything. I know you mentioned using them separately instead of combining them so we can modify the dataloader for that, which might actually help with AE performing better? Also I don't understand the data enough to visaulize it so we should also do that
 #### Data Source
 + [ASVspoof 2021 Challenge - Speech Deepfake Database](https://zenodo.org/records/4835108)
 + An evaluation dataset from the 2021 ASVsproof Challenge consisted of real and spoofed utterances synthesized using Text-to-Speech (TTS) or Voice Conversion (VC) algorithms. The dataset is made up of 611819 compressed audio clips in free lossless audio codec (FLAC) format with a 16 kHz sampling rate and 16-bit quantisation, totaling 34.5GB. Of those clips, there are 160 distinct voice profiles (87 female, 73 male) and 22617 real audio clips.
